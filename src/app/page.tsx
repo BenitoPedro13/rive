@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
 import Rive from "@rive-app/react-canvas";
 
-export const RiveDemo = () => {
+const RiveDemo = () => {
   const { rive, RiveComponent } = useRive({
     // Load a local riv `clean_the_car.riv` or upload your own!
     src: "/gatinho.riv",
