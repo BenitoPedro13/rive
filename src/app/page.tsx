@@ -3,12 +3,6 @@ import Image from "next/image";
 import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
 import Rive from "@rive-app/react-canvas";
 
-export const Simple = () => (
-  <Rive
-    src="https://cdn.rive.app/animations/vehicles.riv"
-    stateMachines="bumpy"
-  />
-);
 export const RiveDemo = () => {
   const { rive, RiveComponent } = useRive({
     // Load a local riv `clean_the_car.riv` or upload your own!
@@ -26,21 +20,13 @@ export const RiveDemo = () => {
   return <RiveComponent />;
 };
 
-export const UrlDemo = () => {
-  const { rive, RiveComponent } = useRive({
-    src: "https://cdn.rive.app/animations/vehicles.riv",
-    autoplay: true,
-  });
-  return <RiveComponent />;
-};
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-white w-full">
       <div className="absolute h-full w-full bg-black m-0 p-0">
-        <Simple />
+        {/* <Simple /> */}
         <RiveDemo />
-        <UrlDemo />
+        {/* <UrlDemo /> */}
       </div>
     </main>
   );
